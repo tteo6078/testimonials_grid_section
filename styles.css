@@ -7,6 +7,7 @@
   --card-radius: 10px;
   --gap: 1rem;
   --ff: "Barlow Semi Condensed";
+  --shadow: 20px 20px 50px hsl(0 0% 81%);
 
   /* Purples */
   --purple-50:  hsl(260 100% 95%);
@@ -101,28 +102,30 @@ body{
 }
 
 /* Tesimonial card customization */
-.container .testimonial-card-purple {
+.purple {
   background-color: var(--purple-500);
   color: var(--white);
   border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
 }
 
-.container .testimonial-card-grey {
+.mid-dark {
   background-color: var(--grey-500);
   color: var(--purple-50);
   border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
 }
 
-.container .testimonial-card-white {
+.light {
   background-color: var(--white);
   color: var(--grey-500);
   border-radius: var(--card-radius);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
-.container .testimonial-card-dark {
+.dark {
     background-color: var(--dark-blue);
     color: var(--grey-200);
     border-radius: var(--card-radius);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
