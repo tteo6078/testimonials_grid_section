@@ -1,5 +1,35 @@
-body {
-    background-color: hsl(214, 17%, 92%);
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+:root{
+  --bg: hsl(214 17% 92%);
+  --card-radius: 10px;
+  --gap: 1rem;
+  --ff: "Barlow Semi Condensed";
+
+  /* Purples */
+  --purple-50:  hsl(260 100% 95%);
+  --purple-300: hsl(264 82% 80%);
+  --purple-500: hsl(263 55% 52%);
+
+  /* Neutrals */
+  --white:      hsl(0 0% 100%);
+  --grey-100:   hsl(214 17% 92%);
+  --grey-200:   hsl(0 0% 81%);
+  --grey-400:   hsl(224 10% 45%);
+  --grey-500:   hsl(217 19% 35%);
+  --dark-blue:  hsl(219 29% 14%);
+  --black:      hsl(0 0% 7%);
+}
+
+html { font-size: 16px; }
+body{
+  margin: 0;
+  font-family: var(--ff);
+  background-color: var(--bg);
+  color: var(--grey-200);
+  line-height: 1.45;
 }
 
 .container {
@@ -8,79 +38,91 @@ body {
     padding: 0 20px;
 }
 
-.container h1 {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
+
+.verified {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
+.verified.white {
+    color: var(--white);
+}
+
+.verified.grey {
+    color: var(--grey-200);
+}
+
+.verified.dark-grey {
+    color:  var(--grey-400);
+}
+
+
+/* User Infomation Section */
+.avatar{
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.container .testimonial-card .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container .testimonial-card .username {
+    margin: 0;
+    font-weight: 600;         
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.container .testimonial-card .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 1.5rem;
+}
+
+/* User Title & Comment */
 .container .testimonial-card .testimonial-title {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: var(--ff);
     font-weight: 600;
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
-.verified {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 0.9rem;
-    margin-left: 10px;
-}
-
-.verified.white {
-    color: hsl(0, 0%, 100%);
-}
-
-.verified.grey {
-    color: hsl(0, 0%, 81%);
-}
-
-.verified.dark-grey {
-    color: hsl(224, 10%, 45%);
-}
-
-
-.container img {
-    border-radius: 100px;
-    margin-right: 15px;
-}
-
 .container .testimonial-card .testimonial-quote {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: var(--ff);
     font-weight: 500;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
-.container .testimonial-card-daniel {
-    background-color: hsl(263, 55%, 52%);
-    color: hsl(260, 100%, 95%);
-    border-radius: 10px;
+/* Tesimonial card customization */
+.container .testimonial-card-purple {
+  background-color: var(--purple-500);
+  color: var(--white);
+  border-radius: var(--card-radius);
 }
 
-.container .testimonial-card-jonathan {
-    background-color: hsl(217, 19%, 35%);
-    color: hsl(260, 100%, 95%);
-    border-radius: 10px;
+.container .testimonial-card-grey {
+  background-color: var(--grey-500);
+  color: var(--purple-50);
+  border-radius: var(--card-radius);
 }
 
-.container .testimonial-card-jeanette {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(217, 19%, 35%);
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+.container .testimonial-card-white {
+  background-color: var(--white);
+  color: var(--grey-500);
+  border-radius: var(--card-radius);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.container .testimonial-card-patrick {
-    background-color: hsl(219, 29%, 14%);
-    color: hsl(0, 0%, 81%);
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.container .testimonial-card-kira {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(219, 29%, 14%);
-    border-radius: 10px;
+.container .testimonial-card-dark {
+    background-color: var(--dark-blue);
+    color: var(--grey-200);
+    border-radius: var(--card-radius);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
