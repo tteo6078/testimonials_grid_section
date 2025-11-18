@@ -24,6 +24,10 @@ body{
   font-family: var(--ff);
   background-color: hsl(214, 17%, 96%);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   line-height: 1.5;
 }
 
