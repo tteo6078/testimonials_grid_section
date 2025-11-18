@@ -1,7 +1,3 @@
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
 :root{
   --bg: hsl(214 17% 92%);
   --card-radius: 10px;
@@ -24,21 +20,18 @@
   --black:      hsl(0 0% 7%);
 }
 
-html { font-size: 16px; }
 body{
   margin: 0;
   font-family: var(--ff);
   background-color: var(--bg);
   color: var(--grey-200);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .container {
-    max-width: 1110px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 
 .verified {
   margin: 0;
@@ -68,7 +61,6 @@ body{
 .container .testimonial-card .testimonial-header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .container .testimonial-card .username {
@@ -82,23 +74,20 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.15rem;
-    padding: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 /* User Title & Comment */
 .container .testimonial-card .testimonial-title {
     font-family: var(--ff);
     font-weight: 600;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 18px;
 }
 
 .container .testimonial-card .testimonial-quote {
     font-family: var(--ff);
     font-weight: 500;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 13px;
 }
 
 /* Tesimonial card customization */
@@ -107,13 +96,24 @@ body{
   color: var(--white);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.purple .avatar {
+    border: 2px solid var(--grey-100);
 }
 
 .mid-dark {
   background-color: var(--grey-500);
-  color: var(--purple-50);
+  color: var(--white);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mid-dark .testimonial-quote {
+    color: var(--grey-100);
 }
 
 .light {
@@ -121,6 +121,12 @@ body{
   color: var(--grey-500);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.light .testimonial-quote {
+    color: var(--grey-400);
 }
 
 .dark {
@@ -128,4 +134,10 @@ body{
     color: var(--grey-200);
     border-radius: var(--card-radius);
     box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dark .avatar {
+    border: 2px solid var(--purple-500)
 }
